@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Simple Cypress project",
   "main": "index.js",
-  "dependencies": {
-    "cypress": "^4.8.0"
-  },
+  "dependencies": {},
   "scripts": {
     "cypress:open": "cypress open",
     "test:chrome": "cypress run --browser chrome",
@@ -13,6 +11,7 @@
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "devDependencies": {
+    "cypress": "^9.3.1",
     "cypress-multi-reporters": "^1.5.0",
     "mocha": "^9.1.4",
     "mochawesome": "^7.0.1",
