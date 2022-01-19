@@ -1,4 +1,11 @@
 {
+  "name": "cypress-project",
+  "version": "1.0.0",
+  "description": "Simple Cypress project",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^4.8.0"
+  },
   "scripts": {
     "cypress:open": "cypress open",
     "test:chrome": "cypress run --browser chrome",
@@ -11,5 +18,9 @@
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chefranov/Cypress-Automation.git"
   }
 }
