@@ -1,11 +1,31 @@
-describe('My First Test', () => {
-    it('finds the content "type"', () => {
-      cy.visit('https://example.cypress.io')
-      cy.contains('type').click()
-      cy.url().should('include', '/commands/actions')
+describe('Google success search', () => {
 
-      cy.get('.action-email')
-      .type('fake@email.com')
-      .should('have.value', 'fake@email.com')
+    it('Successfully loads Google.com', () => {
+        cy.visit('https://www.google.com')
+    })
+
+    it('Search for a video', () => {
+        cy.get('[name="q"]')
+        .type('never gonna give you up youtube')
+        .should('have.value', 'never gonna give you up youtube')
+        .type('{enter}')
+    })
+  })
+
+  describe('Google fail search', () => {
+
+    it('Successfully loads Google.com', () => {
+        cy.visit('https://www.google.com')
+    })
+
+    it('Search for something strange', () => {
+        cy.get('[name="q"]')
+        .type('anqqaxc a57k2..')
+        .should('have.value', 'anqqaxc a57k2..')
+        .type('{enter}')
+    })
+
+    it('Expect more than 1000 results', () => {
+        cy.get('[id="result-stats"]').contains('100 results')
     })
   })
